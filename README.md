@@ -48,3 +48,46 @@ CREATE TABLE bank_customers(
 	poutcome VARCHAR(20),
 	deposit VARCHAR(10)
 );
+```
+🔍 2. SQL Data Cleaning & Exploration
+Handled NULLs and duplicate rows
+
+Created age and balance groupings using CASE statements
+
+Extracted a clean dataset via SQL for further ML processing
+
+🧪 3. Data Preprocessing & Clustering (in k_means.ipynb)
+Imported SQL data using SQLAlchemy
+
+Applied one-hot encoding (no category dropped)
+
+Normalized data using StandardScaler
+
+Reduced dimensionality using PCA (n_components=2) for better cluster separation
+
+Trained KMeans with an optimal k=4 (based on elbow method)
+
+Assigned cluster labels and visualized results using 2D scatter plots
+
+🧠 4. Final Model Components
+✅ StandardScaler → Trained on 42 one-hot encoded features
+
+✅ PCA (n_components=2) → Trained on scaled features
+
+✅ KMeans → Trained on PCA output
+
+✅ All models saved using joblib for deployment
+
+🖥️ 5. GUI Application (Tkinter)
+A modern, dark-themed GUI was built to predict customer segments based on user input.
+
+Key Features:
+
+Dropdowns for all categorical fields (job, marital, education, etc.)
+
+Professionally styled and animated prediction output
+
+Automatically encodes and transforms user inputs behind the scenes
+
+Predicts and displays one of 4 customer segments with clear feedback
+
