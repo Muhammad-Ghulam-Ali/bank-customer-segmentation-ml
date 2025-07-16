@@ -1,8 +1,12 @@
 # bank-customer-segmentation-ml
+
 End-to-end customer segmentation project in banking using SQL, Python (Pandas, Scikit-Learn, PCA, KMeans), and Tkinter GUI. Real-world demo of data cleaning, clustering, and business-driven segment labeling.
+
 # 🏦 Customer Segmentation using K-Means Clustering
 
 This project demonstrates a full end-to-end pipeline for customer segmentation using K-Means clustering. The workflow includes data import from SQL, cleaning and preprocessing, applying dimensionality reduction (PCA), clustering using K-Means, and building a modern GUI for real-time prediction.
+
+---
 
 ## 📊 Project Summary
 
@@ -10,15 +14,12 @@ Banks deal with thousands of customers, each with different characteristics. Ins
 
 ---
 
-
----
-
 ## ⚙️ Technologies Used
 
-- **SQL**: For data schema, cleaning, and basic feature engineering
-- **Python (Pandas, NumPy, Sklearn)**: For preprocessing, PCA, and KMeans
-- **Matplotlib/Seaborn**: For visualization
-- **Tkinter**: For building a modern, dark-themed GUI interface
+- **SQL**: For data schema, cleaning, and basic feature engineering  
+- **Python (Pandas, NumPy, Sklearn)**: For preprocessing, PCA, and KMeans  
+- **Matplotlib/Seaborn**: For visualization  
+- **Tkinter**: For building a modern, dark-themed GUI interface  
 
 ---
 
@@ -47,42 +48,3 @@ CREATE TABLE bank_customers(
 	poutcome VARCHAR(20),
 	deposit VARCHAR(10)
 );
-🔍 2. SQL Data Cleaning & Exploration
-Handled NULLs and duplicate rows
-
-Created age and balance groupings using CASE statements
-
-Extracted a clean dataset via SQL for further ML processing
-
-🧪 3. Data Preprocessing & Clustering (in k_means.ipynb)
-Imported SQL data using SQLAlchemy
-
-Applied one-hot encoding (no category dropped)
-
-Normalized data using StandardScaler
-
-Reduced dimensionality using PCA (2 components) for better cluster separation
-
-Trained KMeans with an optimal k=4 based on elbow method
-
-Assigned cluster labels and visualized with 2D scatter plots
-
-🧠 4. Final Model Components
-✅ StandardScaler → Trained on 42 one-hot encoded features
-
-✅ PCA (n_components=2) → Trained on scaled features
-
-✅ KMeans → Trained on PCA output
-
-✅ Saved models using joblib for deployment
-
-🖥️ 5. GUI Application (Tkinter)
-A modern, dark-themed GUI was built to predict customer segment based on user inputs. Features:
-
-Dropdowns for all categorical inputs (job, marital, education, etc.)
-
-Styled, animated prediction output box
-
-Auto-handles feature encoding and transformation
-
-Predicts and displays one of 4 customer segments
